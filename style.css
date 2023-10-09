@@ -1,4 +1,7 @@
-.jumbotron {
-  padding-top: 6rem;
-  background-color: #e2edff;
+.card {
+  align-items: center;
+}
+.aboutme {
+  padding-bottom: 20px;
+  padding-top: 50px;
 }

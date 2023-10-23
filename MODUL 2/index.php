@@ -20,8 +20,9 @@ $_POST['berat_badan']:'';
 
 // **********************  2  ************************** 
 
-if($tinggi_badan=='' || $berat_badan=='' || $tinggi_badan == 0 || $berat_badan == 0){
-    $Error=True;
+$error = "";
+if (empty($tinggi_badan) || empty($berat_badan)) {
+    $error = "Tinggi Badan dan Berat Badan tidak boleh kosong!";
 }
 
 // **********************  3  ************************** 
@@ -31,7 +32,7 @@ if($tinggi_badan=='' || $berat_badan=='' || $tinggi_badan == 0 || $berat_badan =
 
 
 // **********************  3  ************************** 
-if (empty($Error)) {
+if (empty($error)) {
     $tinggi_badan_m = $tinggi_badan / 100;
     $bmi = $berat_badan / ($tinggi_badan_m * $tinggi_badan_m);
     $bmi = number_format($bmi, 1);
@@ -97,13 +98,12 @@ if (empty($Error)) {
                     <!--  **********************  5  **************************     -->
                     <!-- Hasil pesan error nya taruh di sini yaaa!! 😊  -->
                     <!-- silakan taruh code kalian di bawah -->
-                    
-                    <?php
-                    if(isset($Error)) {
-                        echo '
-                        <div class="card-link text-center">Masukkan Tinggi badan dan berat badan '.$Error.' </div>';
-                    }
-                    ?>
+            
+                    <?php if (!empty($error)): ?>
+                        <div class="alert alert-danger mt-3">
+                        <?php echo $error; ?>
+                        </div>
+                    <?php endif; ?>
                     <!--  **********************  5  **************************     -->
 
 

@@ -22,7 +22,7 @@ $_POST['berat_badan']:'';
 
 $error = "";
 if (empty($tinggi_badan) || empty($berat_badan)) {
-    $error = "Tinggi Badan dan Berat Badan tidak boleh kosong!";
+    $error = "Tinggi Badan dan Berat Badan tidak boleh kosong!!!";
 }
 
 // **********************  3  ************************** 

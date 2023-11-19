@@ -18,7 +18,7 @@ $result = $conn->query($query);
     include("navbar.php");
     include("connect.php");
     
-    // Buatlah query untuk mengambil data dari database (gunakan query SELECT)
+    // Buatlah query untuk mengambil data dari databases (gunakan query SELECT)
 
     $query = "SELECT * FROM showroom_mobil";
     $result = $conn->query($query);
